@@ -1,0 +1,139 @@
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.app-container {
+    background-color: #F6F5FB;
+    width: 100%;
+    max-width: 450px;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.input-area, .stats-area {
+    text-align: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-row, .result-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 120px;
+    height: 35px;
+    background-color: #7D8476;
+    border-radius: 10px;
+    color: #63B4FF;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+
+
+.display-box {
+    width: 160px;
+    height: 45px;
+    background-color: #A9A9A9;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-box.small {
+    width: 140px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: #7D8476;
+    font-size: 16px;
+}
+
+.circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7D8476;
+    transition: transform 0.1s;
+}
+
+.circle-btn:active {
+    transform: scale(0.9);
+}
+
+.check-btn { color: #FF006E; font-size: 20px; }
+.edit-btn { font-size: 18px; }
+.edit-btn.active { background-color: #FF006E; }
+
+.reset-btn img { filter: invert(1); }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+    min-height: 100px;
+}
+
+.point-item {
+    position: relative;
+    height: 60px;
+    background-color: #A9A9A9;
+    border-radius: 15px;
+    border: 3px solid #63B4FF;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container.edit-mode .point-item {
+    border-color: #FF006E;
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}

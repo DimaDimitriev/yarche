@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ярче! Баллы</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="logo.png" alt="Ярче!" class="logo">
+        </header>
+
+        <main class="mainer">
+            <div class="input-area">
+                <label>Введите кол-во баллов за товар:</label>
+                <div class="input-row">
+                    <input type="number" id="points-input" step="0.001" placeholder="0.000">
+                    <button id="add-btn" class="circle-btn check-btn">✓</button>
+                    <button id="edit-mode-btn" class="circle-btn edit-btn">✏️</button>
+                </div>
+            </div>
+
+            <div id="buttons-grid" class="grid-container"></div>
+
+            <div class="stats-area">
+                <div class="stat-item">
+                    <label>Баллы за смену:</label>
+                    <div class="result-row">
+                        <div id="total-display" class="display-box">0.000</div>
+                        <button id="reset-btn" class="circle-btn reset-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/61/61444.png" width="20">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <label>Последнее нажатие:</label>
+                    <div id="last-press-display" class="display-box small">---</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
